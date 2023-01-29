@@ -1,0 +1,143 @@
+
+.split{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.left{
+    left: 0;
+}
+.right{
+    right: 0;
+}
+.centered{
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/*.centered img{
+    width: 425px;
+    height: 250px;
+    border-radius: 50%;
+}*/
+.tag
+{
+    text-align: center;
+    font-family: Papyrus;
+    font-size: 13px;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    font-family: Papyrus;
+    font-weight: bold;
+    font-size: 35px;
+}
+article{
+   /* height: 100%;*/
+    margin-block: 200px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#main{
+    width: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: darkolivegreen;
+    border-radius: 7px;
+    box-shadow: 0 0 7px 4px #000;
+}
+#login-error-message-holder{
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+}
+#login-error-message{
+    text-align: center;
+    margin: 0;
+    width: 15px;
+    padding:5px;
+    font-size:10px;
+    font-weight: bold;
+    color: #8a0000;
+    border: 1px solid #8a0000;
+    background-color: #e5af8f;
+    opacity:0;
+}
+/* error message split in 2 lines with span for Invalid username and/or password
+and show on a new line coz of block display*/
+#error-message-second-line{
+    display: block;
+}
+/* This is a grid of main element container, so we can choose how to items are positioned in
+its own row. Align self will vertically align tp the top of its row*/
+#login-form{
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+/* styling only the placeholders of the element with the class .login-form-field with pseudo element*/
+.login-form-field::placeholder{
+    color: #3a3a3a;
+    align-items: center;
+}
+/*styling form fields*/
+.login-form-field{
+    display: grid;
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+
+}
+/* style the login button*/
+#login-form-submit{
+    display: block;
+    width:30%;
+    padding: 5px;
+    border: none;
+    margin: 20px;
+    position: relative;
+    right:20px;
+    border-radius: 5px;
+    color: antiquewhite;
+    font-weight: bold;
+    background-color: peru;
+    justify-items: center;
+    cursor:pointer;
+    outline:none;
+}
+
+.error{
+    text-align: center;
+    font-size: 30px;
+    font-family: Papyrus;
+    margin-block: 20px;
+    font-weight: bold;
+}
+
+.header
+{
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-size: 45px;
+    font-family: papyrus;
+    font-weight: bold;
+    color: white;
+}
+
+

@@ -1,0 +1,56 @@
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.products
+{
+    background-color: white;
+}
+
+.products .col
+{
+    display: inline-flex;
+    border-style: solid;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 30px;
+}
+
+.products img
+{
+    height: 180px;
+    width: 250px;
+}
+
+.products button
+{
+    height: 80px;
+    width: 120px;
+}
+
+.products h5
+{
+    font-family: papyrus;
+    font-weight: bold;
+}
+
+.backpack
+{
+   height: 300px;
+}
+
+.details-title
+{
+    font-weight: bold;
+    font-family: papyrus;
+    padding-right: 10px;
+    color: gray;
+}
+
+h5
+{
+    padding-right: 10px;
+}
