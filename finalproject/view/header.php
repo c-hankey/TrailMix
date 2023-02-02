@@ -15,20 +15,37 @@
 </head>
 <body>
     <div class="container-fluid back-green">
-
         <div class="d-flex justify-content-end align-items-start pt-2">
             <button class="btn btn-outline-light" href="about.html">Login</button>
         </div>
 
-        <div class="d-flex justify-content-center align-items-center">
-            <h1 class="display-1">Trail</h1>
-            <div>
-                <a href="index.php"><img src="../img/pinetreeline.png" alt="Pine Treeline"></a>
-            </div>
-                <h1 class="display-1">Mix</h1>
+        <div class = "container align-items-center">
+            <div class="row">
+            <div class = "col">
+                <a href="../docs/TrailMix.pdf"> <img src = "../img/newspaper.png"></a>
             </div>
 
+            <div class = "col">
+                <div class="d-flex align-items-center">
+                     <h1 class="display-1">Trail</h1>
+                    <div>
+                        <a href="index.php"><img src="../img/pinetreeline.png" alt="Pine Treeline"></a>
+                    </div>
+                    <h1 class="display-1">Mix</h1>
+                </div>
+            </div>
+
+            <div class = "col"></div>
+            </div>
+
+        </div>
     </div>
+
+
+
+
+
+
 <?php
     require_once '../view/navbar.php';
 ?>

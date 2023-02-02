@@ -5,36 +5,34 @@
 <section id="trails">
 
     <div class="card d-flex justify-content-center align-items-center flex-md-row">
-        <div class="card my-4 mx-4">
-            <img src="../img/sunglasses.png" class="card-img-top" alt="...">
+        <div class="card my-4 mx-4" style = "width: 25%;">
+            <img src="../img/looptrail.jpg" style = "height: 50%;" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">Clarion Loop Trail</h5>
+                <p class="card-text"><strong>Clarion, PA</strong></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">Distance: 1.6 miles</li>
+                <li class="list-group-item">Difficulty: 3/5</li>
             </ul>
             <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <a href="loop.php" class="card-link">Details</a>
+                <a href="#" class="card-link">Trail Website</a>
             </div>
         </div>
-        <div class="card my-4 mx-4">
-            <img src="../img/sunglasses.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="card my-4 mx-4" style = "width: 25%">
+            <img src="../img/bakertrail.jpg" class="card-img-top" alt="...">
+            <div class="card-body" >
+                <h5 class="card-title">Baker Trail</h5>
+                <p class="card-text"><strong>Cooksburg, PA</strong></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">Distance: 12 miles</li>
+                <li class="list-group-item">Difficulty: 4/5</li>
             </ul>
             <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <a href="baker.php" class="card-link">Details</a>
+                <a href="#" class="card-link">Trail Website</a>
             </div>
         </div>
     </div>
