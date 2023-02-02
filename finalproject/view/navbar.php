@@ -35,7 +35,7 @@
                         <li><a class="dropdown-item" href="#">Send Emails</a></li>
                         <li><a class="dropdown-item" href="#">Security</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Grading</a></li>
+                        <li><a class="dropdown-item" href="grading.php">Grading</a></li>
                     </ul>
                 </li>
             </ul>
