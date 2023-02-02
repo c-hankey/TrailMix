@@ -15,8 +15,8 @@ h1 {
     width: 25%;
 }
 
-#main {
-    background-color: whitesmoke;
+#main, #about {
+    background-color: #FFFFF0;
     padding-top: 40px;
 }
 
@@ -27,5 +27,9 @@ h1 {
 
 .cardbg {
     color: #6A6B5B;
+}
+
+.back-ivory {
+    background-color: #FFFFF0;
 }
 

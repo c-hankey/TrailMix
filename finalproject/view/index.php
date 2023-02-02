@@ -2,6 +2,7 @@
 <?php
     require_once '../view/header.php';
 ?>
+
 <section id="main">
 
     <div class="d-flex flex-md-row flex-column mx-2">
@@ -35,7 +36,7 @@
         </div>
 
         <div class="container-sm">
-            <h1>Welcome!</h1>
+            <h1><strong>Welcome!</strong></h1>
             <p>If you are viewing this page you have stumbled into the world of Trail Mix. No we are not talking about the edible
                 treat you eat while performing various activities, but the wonderful world of hiking trails. We are hoping to dive
                 into this world by compiling hiking trail information from trails in Western Pennsylvania. Not interested in Pennsylvania?
