@@ -1,0 +1,35 @@
+.back-green {
+    background-color: #6A6B5B;
+}
+
+img {
+    padding-bottom: 10px;
+}
+
+h1 {
+    color: #191514;
+    font-family: "Ink Free";
+}
+
+.restrict-size {
+    width: 25%;
+}
+
+#main, #about {
+    background-color: #FFFFF0;
+    padding-top: 40px;
+}
+
+.newspaper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.cardbg {
+    color: #6A6B5B;
+}
+
+.back-ivory {
+    background-color: #FFFFF0;
+}
+
