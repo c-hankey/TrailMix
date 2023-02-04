@@ -18,7 +18,7 @@
             </ul>
             <div class="card-body">
                 <a href="loop.php" class="card-link">Details</a>
-                <a href="#" class="card-link">Trail Website</a>
+                <a href="https://visitpago.com/listings/clarion-loop-trail/" class="card-link">Trail Website</a>
             </div>
         </div>
         <div class="card my-4 mx-4" style = "width: 25%">
