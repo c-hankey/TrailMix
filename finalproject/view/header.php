@@ -3,7 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TrailMix</title>
+    <title>
+        <?php echo $title ?>
+    </title>
 
     <!--CSS STYLESHEETS-->
     <link rel="icon" href = "../img/pineicon.png">

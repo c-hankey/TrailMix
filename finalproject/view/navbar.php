@@ -17,13 +17,13 @@
                     <a class="nav-link" href="trails.php">Trails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Activities</a>
+                    <a class="nav-link" href="undercontruction.php">Activities</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Newsletter</a>
+                    <a class="nav-link" href="newsletter.php">Newsletter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tips and Info</a>
+                    <a class="nav-link" href="undercontruction.php">Tips and Info</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -31,9 +31,9 @@
                         Admin
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">File Uploads</a></li>
-                        <li><a class="dropdown-item" href="#">Send Emails</a></li>
-                        <li><a class="dropdown-item" href="#">Security</a></li>
+                        <li><a class="dropdown-item" href="undercontruction.php">File Uploads</a></li>
+                        <li><a class="dropdown-item" href="undercontruction.php">Send Emails</a></li>
+                        <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="grading.php">Grading</a></li>
                     </ul>

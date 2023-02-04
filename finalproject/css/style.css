@@ -1,3 +1,4 @@
+
 .back-green {
     background-color: #6A6B5B;
 }
@@ -15,9 +16,10 @@ h1 {
     width: 25%;
 }
 
-#main, #about, #baker, #trails, #loop {
+#main, #about, #baker, #trails, #loop, #construction, #newsletter {
     background-color: #FFFFF0;
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .newspaper {
@@ -33,5 +35,7 @@ h1 {
     background-color: #FFFFF0;
 }
 
-
-
+#pdf-newsletter {
+    width: 75%;
+    height: 750px;
+}
