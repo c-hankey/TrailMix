@@ -32,7 +32,8 @@
             </ul>
             <div class="card-body">
                 <a href="baker.php" class="card-link">Details</a>
-                <a href="#" class="card-link">Trail Website</a>
+                <a href="https://visitpago.com/listings/baker-trail/#:~:text=In%20Cook%20Forest%2012%20miles,hiking%20trail%20traversing%20six%20counties."
+                   class="card-link">Trail Website</a>
             </div>
         </div>
     </div>
