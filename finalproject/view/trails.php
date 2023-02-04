@@ -1,4 +1,5 @@
 <?php
+    $title = "Trails";
     require_once '../view/header.php';
 ?>
 

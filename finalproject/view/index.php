@@ -1,5 +1,6 @@
 
 <?php
+    $title = "TrailMix";
     require_once '../view/header.php';
 ?>
 
