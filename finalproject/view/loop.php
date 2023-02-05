@@ -1,4 +1,5 @@
 <?php
+$title = "Loop Trail Details";
 require_once '../view/header.php';
 ?>
 

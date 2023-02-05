@@ -1,4 +1,5 @@
 <?php
+$title = "Baker Trail Details";
 require_once '../view/header.php';
 ?>
 
