@@ -44,6 +44,21 @@
                 That's okay! Our site provides many useful tips and tricks that are useful on any hiking trip. Our site also acts as
                 connection point for hikers across the world. Feel free to post a comment or add to any conversation. Now go ahead
                 and take a tour around the site!</p>
+            <h1>Featured Activity: </h1>
+            <div class="card my-4 mx-4" style = "width: 75%;">
+                <div class="card-body">
+                    <h5 class="card-title">Gateway Lodge</h5>
+                    <p class="card-text"><strong>Wine and Dine Romance Package!</strong></p>
+                </div>
+                <div class="card-body">
+                <p>Come on down to the rustic yet elegant Gateway Lodge! Enjoy <br>
+                a candle lit 3-course meal accompanied by a cello and guitar duo to swoon your lover. <br>
+                Make your reservation today!</p>
+                </div>
+                <div class="card-body">
+                    <a href="https://gatewaylodge.com/food-and-drink/" class="card-link">Website</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
