@@ -8,28 +8,42 @@
 
     <div class="d-flex flex-md-row flex-column mx-2">
         <div class="container-lg">
-            <div id="carouselExampleIndicat ors" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/boots.jpg" class="d-block w-100" alt="...">
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/bridge.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/hikers.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/bigtrees.jpg" class="d-block w-100" alt="...">
+                        </div>
+
+                        <?php
+                        $current_dir = '../imguploads';
+                        $dir = opendir($current_dir);
+                        $imgs = [];
+                        while(false !== ($file = readdir($dir))){
+                            if($file != "." && $file != ".."){;
+                                $imgs[] = $file;
+                            }
+                        }
+                        closedir($dir);
+                        foreach($imgs as $value)
+                        {
+                            echo "<div class=\"carousel-item\"> 
+                                    <img src=\"../imguploads/$value\" class=\"d-block w-100\" alt=\"...\"> 
+                                  </div>";
+                        };
+                        ?>
                     </div>
-                    <div class="carousel-item">
-                        <img src="../img/hikers.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/hikingboots.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
