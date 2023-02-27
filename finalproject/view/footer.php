@@ -1,7 +1,18 @@
-
 <div class="container-fluid back-green">
+
     <div class="d-flex justify-content-center align-items-center">
-        <p class="text-white mx-3 mt-4">Send us an
+        <p class="text-white my-4">
+            <?php
+                $content = file_get_contents('../DataFiles/quotes.txt');
+                $quotes = array_filter(explode(PHP_EOL, $content));
+                $quote = array_rand($quotes);
+                echo($quotes[$quote]);
+            ?>
+        </p>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <p class="text-white mx-3">Send us an
             <a href="mailto: s_cmhankey1@pennwest.edu" class="text-white">EMAIL</a>
         </p>
     </div>

@@ -16,11 +16,12 @@ h1 {
     width: 25%;
 }
 
-#main, #about, #baker, #trails, #loop, #construction, #newsletter, #grading {
+#main, #about, #baker, #trails, #loop, #construction, #newsletter, #grading, #quote, .quote {
     background-color: #FFFFF0;
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
 
 .newspaper {
     margin-top: 30px;

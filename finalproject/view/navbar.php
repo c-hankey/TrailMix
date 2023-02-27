@@ -32,6 +32,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="undercontruction.php">File Uploads</a></li>
+                        <li><a class="dropdown-item" href="quoteupload.php">Quote Uploads</a></li>
                         <li><a class="dropdown-item" href="undercontruction.php">Send Emails</a></li>
                         <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>
                         <li><hr class="dropdown-divider"></li>
