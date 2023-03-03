@@ -19,7 +19,7 @@ $headers['Subject'] = 'Trail Mix News Letter';
 $headers['Content-type'] = 'text/html';
 
 // $recipients is an array of addresses,$message is the html
-$message = "<html><head></head><body>The beer of the month is at <a href='www.sailfishbrewingco.com'>Sailfish Brewery</a></body></html>";
+$message = "<html><head></head><body></body></html>";
 //    $recipients = array('jon.odonnell@gmail.com');
 
 echo "<h3>Sending Emails To:</h3><ol>";

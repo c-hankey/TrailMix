@@ -17,23 +17,15 @@
                     <a class="nav-link" href="trails.php">Trails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="undercontruction.php">Activities</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="newsletter.php">Newsletter</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="undercontruction.php">Tips and Info</a>
-                </li>
-
                 <li class = "nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         File Uploads
                     </a>
                     <ul class = "dropdown-menu">
                         <li><a class = "dropdown-item" href="imageFileUpload.php">Image Upload</a></li>
-                        <li><a class="dropdown-item" href="quoteUpload.php">Quote Uploads</a></li>
-                        <li><a class="dropdown-item" href="newsletterUpload.php">Newsletter Uploads</a></li>
+                        <li><a class="dropdown-item" href="quoteupload.php">Quote Uploads</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

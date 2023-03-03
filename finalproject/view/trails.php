@@ -15,7 +15,7 @@ $title = "Trails";
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Distance: 1.6 miles</li>
-                <li class="list-group-item">Difficulty: 3/5</li>
+                <li class="list-group-item">Difficulty: 2/5</li>
             </ul>
             <div class="card-body">
                 <a href="loop.php" class="card-link">Details</a>
@@ -38,6 +38,39 @@ $title = "Trails";
                    class="card-link">Trail Website</a>
             </div>
         </div>
+
+        <div class="card my-4 mx-4" style = "width: 25%">
+            <img src="../img/nct.jpg" class="card-img-top" alt="..." height="208">
+            <div class="card-body" >
+                <h5 class="card-title">North Country Trail Clarion Trailhead</h5>
+                <p class="card-text"><strong>Clarion, PA</strong></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Distance: 35 miles</li>
+                <li class="list-group-item">Difficulty: 3/5</li>
+            </ul>
+            <div class="card-body">
+                <a href="nct.php" class="card-link">Details</a>
+                <a href="https://northcountrytrail.org/trail/pennsylvania/cla/"
+                   class="card-link">Trail Website</a>
+            </div>
+        </div>
+
+        <div class="card my-4 mx-4" style = "width: 25%">
+            <img src="../img/tobecco.jpg" class="card-img-top" alt="..." height="208">
+            <div class="card-body" >
+                <h5 class="card-title">The Tobecco Trail</h5>
+                <p class="card-text"><strong>Clarington, PA</strong></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Distance: 10 miles</li>
+                <li class="list-group-item">Difficulty: 3/5</li>
+            </ul>
+            <div class="card-body">
+                <a href="nct.php" class="card-link">Details</a>
+                <a href="https://visitpago.com/tobecco-trail/"
+                   class="card-link">Trail Website</a>
+            </div>
     </div>
 
 </section>
