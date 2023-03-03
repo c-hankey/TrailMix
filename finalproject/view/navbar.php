@@ -40,11 +40,14 @@
                         Admin
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="undercontruction.php">Send Emails</a></li>
+                        <li><a class="dropdown-item" href="emailSend.php">Send Emails</a></li>
                         <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="grading.php">Grading</a></li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signupForm.php">Register</a>
                 </li>
             </ul>
 

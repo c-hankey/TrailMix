@@ -36,7 +36,20 @@ h1 {
     background-color: #FFFFF0;
 }
 
+
 #pdf-newsletter {
     width: 75%;
     height: 750px;
+}
+
+.registerbox{
+    border-radius: 25px;
+    border-style: double;
+    border-color: #2b542c;
+    border-width: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 150px;
 }

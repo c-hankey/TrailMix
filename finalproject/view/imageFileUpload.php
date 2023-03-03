@@ -2,7 +2,7 @@
     $title = "Image Upload";
     require_once '../view/header.php';
     ?>
-<h1>Upload Logo File to the Server</h1>
+<h1>Upload Image File to the Server</h1>
 
 <form enctype="multipart/form-data"
       action="imageProcessFile.php" method="post">
