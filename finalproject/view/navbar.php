@@ -32,7 +32,8 @@
                     </a>
                     <ul class = "dropdown-menu">
                         <li><a class = "dropdown-item" href="imageFileUpload.php">Image Upload</a></li>
-                        <li><a class="dropdown-item" href="quoteupload.php">Quote Uploads</a></li>
+                        <li><a class="dropdown-item" href="quoteUpload.php">Quote Uploads</a></li>
+                        <li><a class="dropdown-item" href="newsletterUpload.php">Newsletter Uploads</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

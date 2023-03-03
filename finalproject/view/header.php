@@ -24,7 +24,7 @@
         <div class = "container align-items-center">
             <div class="row">
             <div class = "col">
-                <a href="../docs/TrailMix.pdf" target = _blank> <img src = "../img/newspaper.png"></a>
+                <a href="../DataFiles/newsletter.html" target = _blank> <img src = "../img/newspaper.png"></a>
             </div>
 
             <div class = "col">
