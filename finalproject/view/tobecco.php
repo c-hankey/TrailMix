@@ -1,9 +1,10 @@
 <?php
-$title = "North Country Trail Details";
+$title = "Tobecco Trail Details";
 require_once '../view/header.php';
+$filename = 'tobecco.php';
 ?>
 
-<section id="nct">
+<section id="tobecco">
     <div class="d-flex flex-md-row flex-column">
         <div class = "flex-column">
             <div class = "container">
@@ -37,8 +38,8 @@ require_once '../view/header.php';
             </table>
 
         </div>
-        <div style="width: 75%" class="m-3">
-            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=336-350%20PA-899,%20Clarington,%20PA%2015828+(Tobecco%20Trail)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        <div style="width: 75%" class="m-3 px-3">
+            <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=336-350%20PA-899,%20Clarington,%20PA%2015828+(Tobecco%20Trail)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                 <a href="https://www.maps.ie/distance-area-calculator.html">area maps</a>
             </iframe>
         </div>

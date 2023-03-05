@@ -7,9 +7,9 @@
 
 <section id="trails">
 
-    <div class="card d-flex justify-content-center align-items-center flex-md-row">
-        <div class="card my-4 mx-4" style = "width: 25%;">
-            <img src="../img/looptrail.jpg" style = "height: 50%;" class="card-img-top" alt="...">
+    <div class="d-flex justify-content-center align-items-center flex-md-row">
+        <div class="card my-4 mx-4 trail-card">
+            <img src="../img/looptrail.jpg"  class="card-img-top" alt="loop trail image">
             <div class="card-body">
                 <h5 class="card-title">Clarion Loop Trail</h5>
                 <p class="card-text"><strong>Clarion, PA</strong></p>
@@ -23,8 +23,8 @@
                 <a href="https://www.visitpa.com/region/pennsylvania-wilds/clarion-loop-trail" class="card-link">Trail Website</a>
             </div>
         </div>
-        <div class="card my-4 mx-4" style = "width: 25%">
-            <img src="../img/bakertrail.jpg" class="card-img-top" alt="...">
+        <div class="card my-4 mx-4 trail-card">
+            <img src="../img/bakertrail.jpg" class="card-img-top" alt="baker trail image">
             <div class="card-body" >
                 <h5 class="card-title">Baker Trail</h5>
                 <p class="card-text"><strong>Cooksburg, PA</strong></p>
@@ -40,8 +40,8 @@
             </div>
         </div>
 
-        <div class="card my-4 mx-4" style = "width: 25%">
-            <img src="../img/nct.jpg" class="card-img-top" alt="..." height="208">
+        <div class="card my-4 mx-4 trail-card">
+            <img src="../img/nct.jpg" class="card-img-top" alt="north country trail image" height="208">
             <div class="card-body" >
                 <h5 class="card-title">North Country Trail Clarion Trailhead</h5>
                 <p class="card-text"><strong>Clarion, PA</strong></p>
@@ -57,8 +57,8 @@
             </div>
         </div>
 
-        <div class="card my-4 mx-4" style = "width: 25%">
-            <img src="../img/tobecco.jpg" class="card-img-top" alt="..." height="208">
+        <div class="card my-4 mx-4 trail-card">
+            <img src="../img/tobecco.jpg" class="card-img-top" alt="tobecco trail image">
             <div class="card-body" >
                 <h5 class="card-title">The Tobecco Trail</h5>
                 <p class="card-text"><strong>Clarington, PA</strong></p>
@@ -68,7 +68,7 @@
                 <li class="list-group-item">Difficulty: 3/5</li>
             </ul>
             <div class="card-body">
-                <a href="nct.php" class="card-link">Details</a>
+                <a href="tobecco.php" class="card-link">Details</a>
                 <a href="https://visitpago.com/tobecco-trail/"
                    class="card-link">Trail Website</a>
             </div>

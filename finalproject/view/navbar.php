@@ -17,7 +17,7 @@
                     <a class="nav-link" href="trails.php">Trails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="newsletter.php">Newsletter</a>
+                    <a class="nav-link" href="../DataFiles/newsletter.html" target="_blank">Newsletter</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

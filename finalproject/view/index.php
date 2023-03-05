@@ -71,7 +71,7 @@
                 Make your reservation today!</p>
                 </div>
                 <div class="card-body">
-                    <a href="https://gatewaylodge.com/food-and-drink/" class="card-link">Website</a>
+                    <a href="https://gatewaylodge.com/food-and-drink/" target="_blank" class="card-link">Website</a>
                 </div>
             </div>
         </div>

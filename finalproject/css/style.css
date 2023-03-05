@@ -9,7 +9,7 @@ img {
 
 h1 {
     color: #191514;
-    font-family: "Ink Free";
+    font-family: "Ink Free", sans-serif;
 }
 
 .restrict-size {
@@ -19,7 +19,8 @@ h1 {
 #main, #about, #baker, #trails, #loop,
 #construction, #newsletter, #grading,
 #quote, #fileUpload, #newsletterUpload,
-#imageUpload, #image, #signup, #confirm {
+#imageUpload, #image, #signup, #confirm,
+#nct, #tobecco{
     background-color: #FFFFF0;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -54,4 +55,9 @@ h1 {
     margin-left: 350px;
     margin-right: 350px;
     margin-bottom: 150px;
+}
+
+.trail-card {
+    width: 25%;
+    min-height: 550px;
 }

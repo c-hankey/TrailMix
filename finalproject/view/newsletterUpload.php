@@ -15,8 +15,8 @@
                     action="processFileUpload.php" method="post" class="my-3">
                     Select a Newsletter File:
                     <input type="hidden" name="action" value="newsletterUpload">
-                    <input type="file" name="userfile" accept=".html"/>
-                    <input type="submit" value="Send File" />
+                    <input type="file" name="userfile" accept=".html">
+                    <input type="submit" value="Send File">
                 </form>
 
                 <a href="../DataFiles/newsletter.html" target="_blank" class="text-black">Click here to view the current newsletter file.</a>

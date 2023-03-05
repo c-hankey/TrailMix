@@ -28,7 +28,10 @@
                           //else if image size is too large
                         } else if ($_FILES['userfile']['size'] > 1000000) {
                             echo "<p>Please choose a file smaller than 1MB and then try again.</p>";
-                        } else {
+
+                        } else if($_FILES['userfile']['type'] == 'image/jpeg' ||
+                                  $_FILES['userfile']['type'] == 'image/png'  ||
+                                  $_FILES['userfile']['type'] == 'image/gif' ) {
 
                             $image_info = getimagesize($_FILES['userfile']['tmp_name']);
                             $image_width = $image_info[0];
@@ -37,7 +40,7 @@
 
                             if ($image_type != IMAGETYPE_JPEG && $image_type !=
                                 IMAGETYPE_GIF && $image_type != IMAGETYPE_PNG) {
-                                echo "<p>Only JPEG, GIF, and PNG files are supported.  Please try again.</p>";
+                                echo "<p>Only JPEG, GIF, and PNG files are supported. Please try again.</p>";
                                 print_r($image_info);
 
                               //else if image does not match size requirements
@@ -54,6 +57,8 @@
                                 echo "File Upload Error\n Debugging info:";
                                 print_r($_FILES);
                             }
+                        } else {
+                            echo "<p>Only JPEG, GIF, and PNG files are supported. Please try again.</p>";
                         }
 
                          $current_dir = '../imguploads';

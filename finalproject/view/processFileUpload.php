@@ -22,7 +22,7 @@
                             echo "<p>You did not choose a file. Please choose a file and try again.</p>";
 
                            //else if file is too large
-                        ] else if ($_FILES['userfile']['size'] > 1000000) {
+                        } else if ($_FILES['userfile']['size'] > 1000000) {
                             echo "<p>That file is too large. Please choose a file smaller than 1MB and try again.</p>";
 
                           //else if file is not in correct format

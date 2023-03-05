@@ -46,7 +46,7 @@ $filename = 'grading.php';
                 <tr><td>7.	In your footer, include a way to show the last date modified of each page.</td><td>Located on very bottom of the footer</td><td>Yes</td></tr>
                 <tr><td>8.	This sheet linked in to your site under the Admin menu.</td><td>&nbsp;</td><td>Yes</td></tr>
                 <tr><td>9.	Make sure all pages on your site pass the <a href="https://validator.w3.org/">HTML5 conformance checker</a> and the <a href="https://jigsaw.w3.org/css-validator/">CSS validator</a>. Note that CSS errors from the Bootstrap Libraries are allowed.</td>
-                <td>Some errors show for the iframe we use on the about page. We will look into how to fix this for the next assignment.</td><td>Yes</td></tr>
+                <td>Some errors show due to the iframe we use on the about and trail details pages. We will look into how to fix this for the next assignment and may change it to an image.</td><td>No</td></tr>
                 <tr><td>10.	Complete site published to vcisprod (including redirection).</td><td>&nbsp;</td><td>Yes</td></tr>
                 <tr><td class="indent1">a.	Create a .zip file of your whole site and turn it in to the appropriate folder on D2L.</td><td>&nbsp;</td><td>Yes</td></tr>
                 <tr><td></td><td>&nbsp;</td><td>&nbsp;</td></tr>
