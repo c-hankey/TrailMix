@@ -11,18 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/14c195147d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container-fluid back-green">
         <div class="d-flex justify-content-end align-items-start pt-2">
-            <button class="btn btn-outline-light" href="about.html">Login</button>
+            <button class="btn btn-outline-light">Login</button>
         </div>
 
         <div class = "container align-items-center">
             <div class="row">
             <div class = "col">
-                <a href="../DataFiles/newsletter.html" target = _blank> <img src = "../img/newspaper.png"></a>
+                <a href="../DataFiles/newsletter.html" target = _blank> <img src = "../img/newspaper.png" alt="newspaper image"></a>
             </div>
 
             <div class = "col">
@@ -40,11 +41,6 @@
 
         </div>
     </div>
-
-
-
-
-
 
 <?php
     require_once '../view/navbar.php';

@@ -1,6 +1,7 @@
 <?php
 $title = "Newsletter";
 require_once '../view/header.php';
+$filename = 'newsletter.php';
 ?>
 
 <section id="newsletter" class="justify-content-center">

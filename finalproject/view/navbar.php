@@ -20,29 +20,20 @@
                     <a class="nav-link" href="undercontruction.php">Activities</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="newsletter.php">Newsletter</a>
+                    <a class="nav-link" href="../DataFiles/newsletter.html" target="_blank">Newsletter</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="undercontruction.php">Tips and Info</a>
                 </li>
 
-                <li class = "nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        File Uploads
-                    </a>
-                    <ul class = "dropdown-menu">
-                        <li><a class = "dropdown-item" href="imageFileUpload.php">Image Upload</a></li>
-                        <li><a class="dropdown-item" href="quoteUpload.php">Quote Uploads</a></li>
-                        <li><a class="dropdown-item" href="newsletterUpload.php">Newsletter Uploads</a></li>
-                    </ul>
-                </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Admin
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="emailSend.php">Send Emails</a></li>
                         <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>
+                        <li><a class = "dropdown-item" href="imageFileUpload.php">Image Upload</a></li>
+                        <li><a class="dropdown-item" href="quoteUpload.php">Quote Upload</a></li>
+                        <li><a class="dropdown-item" href="newsletterUpload.php">Newsletter Upload</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="grading.php">Grading</a></li>
                     </ul>

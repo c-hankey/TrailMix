@@ -1,6 +1,7 @@
 <?php
     $title = "Under Construction";
     require_once '../view/header.php';
+    $filename = 'undercontruction.php';
 ?>
 
 <section id="construction" class="pb-5">

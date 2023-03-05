@@ -1,6 +1,7 @@
 <?php
 $title = "Loop Trail Details";
 require_once '../view/header.php';
+$filename = 'loop.php';
 ?>
 
 <section id="loop">

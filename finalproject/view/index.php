@@ -2,6 +2,7 @@
 <?php
     $title = "TrailMix";
     require_once '../view/header.php';
+    $filename = 'index.php';
 ?>
 
 <section id="main">
@@ -11,13 +12,13 @@
             <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../img/bridge.jpg" class="d-block w-100" alt="...">
+                            <img src="../img/bridge.jpg" class="d-block w-100" alt="bridge image">
                         </div>
                         <div class="carousel-item">
-                            <img src="../img/hikers.jpeg" class="d-block w-100" alt="...">
+                            <img src="../img/hikers.jpeg" class="d-block w-100" alt="hiker image">
                         </div>
                         <div class="carousel-item">
-                            <img src="../img/bigtrees.jpg" class="d-block w-100" alt="...">
+                            <img src="../img/bigtrees.jpg" class="d-block w-100" alt="big tree image">
                         </div>
 
                         <?php
@@ -33,7 +34,7 @@
                         foreach($imgs as $value)
                         {
                             echo "<div class=\"carousel-item\"> 
-                                    <img src=\"../imguploads/$value\" class=\"d-block w-100\" alt=\"...\"> 
+                                    <img src=\"../imguploads/$value\" class=\"d-block w-100\" alt=\"image from uploads\">
                                   </div>";
                         };
                         ?>

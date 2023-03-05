@@ -1,16 +1,26 @@
 <?php
     $title = "Image Upload";
     require_once '../view/header.php';
-    ?>
-<h1>Upload Image File to the Server</h1>
+    $filename = 'imageFileUpload.php';
+?>
 
-<form enctype="multipart/form-data"
-      action="imageProcessFile.php" method="post">
-    Select a Logo File:
-    <input name="userfile" type="file" />
-    <input type="submit" value="Send File" />
-</form>
-<p> </p>
+<section id="imageUpload">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h1><strong>Image File Upload</strong></h1>
+
+                <p>Note: Image files should be in the JPEG, GIF, or PNG format.</p>
+                <form enctype="multipart/form-data"
+                    action="imageProcessFile.php" method="post">
+                    Select an Image File:
+                    <input name="userfile" type="file" accept="image/png, image/jpeg, image/gif"/>
+                    <input type="submit" value="Send File" />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php
 require_once '../view/footer.php';

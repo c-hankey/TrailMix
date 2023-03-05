@@ -1,7 +1,8 @@
 
 <?php
-$title = "Trails";
+    $title = "Trails";
     require_once '../view/header.php';
+    $filename = 'trails.php';
 ?>
 
 <section id="trails">

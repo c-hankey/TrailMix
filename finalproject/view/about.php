@@ -1,6 +1,7 @@
 <?php
-    $title = "TrailMix - About";
+    $title = "About";
     require_once '../view/header.php';
+    $filename = 'about.php';
 ?>
 
 <section id="about">
