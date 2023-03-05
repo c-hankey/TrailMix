@@ -17,17 +17,12 @@
                     <a class="nav-link" href="trails.php">Trails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="undercontruction.php">Activities</a>
+                    <a class="nav-link" href="newsletter.php">Newsletter</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../DataFiles/newsletter.html" target="_blank">Newsletter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="undercontruction.php">Tips and Info</a>
-                </li>
-
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="emailSend.php">Send Emails</a></li>
                         <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>

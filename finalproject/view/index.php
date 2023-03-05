@@ -9,7 +9,7 @@
 
     <div class="d-flex flex-md-row flex-column mx-2">
         <div class="container-lg">
-            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="../img/bridge.jpg" class="d-block w-100" alt="bridge image">
@@ -48,7 +48,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-                </div>
+            </div>
         </div>
 
         <div class="container-sm">
