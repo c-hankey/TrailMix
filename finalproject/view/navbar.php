@@ -8,33 +8,33 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link" href="../controller/controller.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.php">About</a>
+                    <a class="nav-link" href="../controller/controller.php?action=About">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="trails.php">Trails</a>
+                    <a class="nav-link" href="../controller/controller.php?action=Trails">Trails</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../DataFiles/newsletter.html" target="_blank">Newsletter</a>
+                    <a class="nav-link" href="../controller/controller.php?action=Newsletter" target="_blank">Newsletter</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Admin
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="emailSend.php">Send Emails</a></li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=EmailSend">Send Emails</a></li>
                         <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>
-                        <li><a class = "dropdown-item" href="imageFileUpload.php">Image Upload</a></li>
-                        <li><a class="dropdown-item" href="quoteUpload.php">Quote Upload</a></li>
-                        <li><a class="dropdown-item" href="newsletterUpload.php">Newsletter Upload</a></li>
+                        <li><a class = "dropdown-item" href="../controller/controller.php?action=ImageUpload">Image Upload</a></li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=Quote">Quote Upload</a></li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=Newsletter">Newsletter Upload</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="grading.php">Grading</a></li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=Grading">Grading</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="signupForm.php">Register</a>
+                    <a class="nav-link" href="../controller/controller.php?action?=Register">Register</a>
                 </li>
             </ul>
 

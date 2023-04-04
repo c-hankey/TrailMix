@@ -9,34 +9,15 @@
     <h1 class="d-flex justify-content-center">Trail Mix Registration</h1>
 
         <?php
-            //variables
-            $FirstName = $_POST['firstName'];
-            $LastName = $_POST['lastName'];
-            $Age = $_POST['age'];
-            $Email = $_POST['email'];
+        echo "<h3>Current members are:</h3><ol>";
+        //not sure why this is giving an error
+        foreach ($memberArray as $member) {
+            echo "<li><a href='mailto:$member[3]'>" .
+                "$member[0] $member[1]</a></li>" ;
+        }
+        echo "</ol>";
 
-            $Email = filter_var($Email, FILTER_SANITIZE_EMAIL);
-
-            if (filter_var($Email, FILTER_VALIDATE_EMAIL) == false){
-                echo "<h4>Please enter a valid email address.</h4>";
-            }
-            else{
-                echo "<h4 class = 'd-flex justify-content-center'>$FirstName, welcome to the Mix!!!</h4><br>";
-
-                $file = fopen('../UserFiles/members.csv', 'ab');
-                fputcsv($file,
-                array($FirstName, $LastName, $Age, $Email));
-                fclose($file);
-
-                echo "<div class='d-flex justify-content-center registerbox'><u><h4>The current members are: </h4></u><ol>";
-
-                $file = fopen('../UserFiles/members.csv', 'rb');
-                while(($data = fgetcsv($file)) !== FALSE) {
-                    echo "<li style='text-decoration: none'><a href='mailto:$data[3]'>" . "$data[0] $data[1]</a></li>";
-                }
-                echo "</ol></div>";
-                fclose($file);
-            }
+        echo "<h3>$FirstName</h3>";
         ?>
 
 </section>

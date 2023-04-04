@@ -30,7 +30,7 @@
                 <div class="d-flex align-items-center">
                      <h1 class="display-1">Trail</h1>
                     <div>
-                        <a href="index.php"><img src="../img/pinetreeline.png" alt="Pine Treeline"></a>
+                        <a href="../view/index.php"><img src="../img/pinetreeline.png" alt="Pine Treeline"></a>
                     </div>
                     <h1 class="display-1">Mix</h1>
                 </div>
