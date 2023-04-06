@@ -19,7 +19,8 @@ $filename = 'listForm.php';
 
             <tbody>
 
-            <?php foreach($results as $row) {
+            <?php $i=0;
+            foreach($results as $row) {
                 $i++
                 ?>
 

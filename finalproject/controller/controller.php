@@ -49,6 +49,9 @@
         case 'RegisterMember':
             include '../view/signupForm.php';
             break;
+        case 'SearchTrails':
+            searchTrails();
+            break;
         case 'Newsletter':
             include '../view/newsletterUpload.php';
             break;
@@ -75,6 +78,7 @@
     }
 
     function listAllTrails(){
+        $listType =
         $results = getAllTrails();
 
         if(count($results) == 0){
@@ -106,6 +110,18 @@
             saveMemberInfo($FirstName, $LastName, $Age, $Email);
             $memberArray = getMembers();
 
+        }
+    }
+
+    function searchTrails() {
+        $results = getAllTrails();
+
+        if(count($results) == 0){
+            $errorMessage = "No trails found.";
+            include '../view/errorPage.php';
+        }
+        else {
+            include '../view/searchTrails.php';
         }
     }
 

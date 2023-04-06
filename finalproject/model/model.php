@@ -16,7 +16,7 @@
     function getAllTrails() {
         try {
             $db = getDBConnection();
-            $query = "select * from trail";
+            $query = "select * from trail ORDER BY Name";
             $statement = $db->prepare($query);
             $statement->execute();
             $results = $statement->fetchAll();
@@ -32,8 +32,9 @@
     function getTrail($trailID) {
         try {
             $db = getDBConnection();
-            $query = "SELECT * FROM trail WHERE TrailID = $trailID ";
+            $query = "SELECT * FROM trail WHERE TrailID = :trailID ";
             $statement = $db->prepare($query);
+            $statement->bindValue(':trailID', $trailID);
             $statement->execute();
             $result = $statement->fetch(); // Should be 0 or 1 row
             $statement->closeCursor();
