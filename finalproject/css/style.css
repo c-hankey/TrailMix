@@ -20,7 +20,7 @@ h1 {
 #construction, #newsletter, #grading,
 #quote, #fileUpload, #newsletterUpload,
 #imageUpload, #image, #signup, #confirm,
-#nct, #tobecco{
+#nct, #tobecco, #trailList{
     background-color: #FFFFF0;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -60,4 +60,29 @@ h1 {
 .trail-card {
     width: 25%;
     min-height: 550px;
+}
+
+.listForm table, .listForm th, .listForm td {
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+}
+
+.listForm th, td {
+    padding: 5px;
+}
+
+.listForm {
+    margin-left: 10px;
+}
+
+.right {
+    text-align: right;
+}
+
+.evenRow {
+    background-color: palegoldenrod;
+}
+
+.oddRow {
+    background-color: bisque;
 }

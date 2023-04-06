@@ -12,7 +12,7 @@
 
     <div class="container-fluid mt-3">
         <div class = "d-flex flex-row justify-content-center">
-            <form action="processSignupForm.php" method="post">
+            <form action="../controller/controller.php?action=ProcessRegisterMember" method="post">
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-6">

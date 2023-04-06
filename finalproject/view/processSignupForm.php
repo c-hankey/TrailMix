@@ -9,15 +9,15 @@
     <h1 class="d-flex justify-content-center">Trail Mix Registration</h1>
 
         <?php
-        echo "<h3>Current members are:</h3><ol>";
-        //not sure why this is giving an error
-        foreach ($memberArray as $member) {
-            echo "<li><a href='mailto:$member[3]'>" .
-                "$member[0] $member[1]</a></li>" ;
-        }
-        echo "</ol>";
+            echo "<h3>Current members are:</h3><ol>";
 
-        echo "<h3>$FirstName</h3>";
+            foreach ($memberArray as $member) {
+                echo "<li><a href='mailto:$member[3]'>" .
+                    "$member[0] $member[1]</a></li>" ;
+            }
+            echo "</ol>";
+
+            echo "<h3>$FirstName</h3>";
         ?>
 
 </section>
