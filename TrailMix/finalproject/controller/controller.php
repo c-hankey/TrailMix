@@ -23,10 +23,13 @@
             include '../view/emailSend.php';
             break;
         case 'Trails':
-            include '../view/trails.php';
+            listTrailCards();
             break;
         case 'Newsletter':
             include '../DataFiles/newsletter.html';
+            break;
+        case 'NewsletterUpload':
+            include '../view/newsletterUpload.php';
             break;
         case 'Home':
             include '../view/index.php';
@@ -40,20 +43,29 @@
         case 'ListTrails':
             listTrails();
             break;
-        case 'Quote':
+        case 'Quotes':
+            include '../DataFiles/quotes.txt';
+            break;
+        case 'QuoteUpload':
             include '../view/quoteupload.php';
+            break;
+        case 'ProcessImage':
+            include '../view/imageProcessFile.php';
+            break;
+        case 'ProcessFileUpload':
+            include '../view/processFileUpload.php';
             break;
         case 'ProcessRegisterMember':
             processRegisterMember();
             break;
-        case 'RegisterMember':
+        case 'Register':
             include '../view/signupForm.php';
             break;
         case 'SearchTrails':
             searchTrails();
             break;
-        case 'Newsletter':
-            include '../view/newsletterUpload.php';
+        case 'TrailDetails':
+            displayTrailCard();
             break;
         default:
             include('../view/index.php');   // default
@@ -77,8 +89,26 @@
         }
     }
 
+    function displayTrailCard() {
+        $trailID = $_GET['TrailID'];
+        if(!isset($trailID)){
+            $errorMessage = "You must provide a trail ID to display.";
+            include '../view/errorPage.php';
+        }
+        else {
+            $row = getTrail($trailID);
+            if($row == FALSE){
+                $errorMessage = "That trail was not found";
+                include '../view/errorPage.php';
+            }
+            else {
+                include '../view/trailDetails.php';
+            }
+        }
+    }
+
     function listTrails(){
-        $listType = $_GET['ListType'];
+        $listType = filter_input(INPUT_GET, 'ListType');
         if($listType == 'LoopTrail'){
             $results = getLoopTrails();
         }
@@ -104,6 +134,17 @@
         }
     }
 
+    function listTrailCards() {
+        $results = getAllTrails();
+        if(count($results) == 0) {
+            $errorMessage = "No trails found.";
+            include '../view/errorPage.php';
+        }
+        else {
+            include '../view/trails.php';
+        }
+    }
+
     function processRegisterMember(){
         $FirstName = $_POST['firstName'];
         $LastName = $_POST['lastName'];
@@ -117,13 +158,9 @@
         }
         else {
             echo "<h4 class = 'd-flex justify-content-center'>$FirstName, welcome to the Mix!!!</h4><br>";
-
-
-            include '../model/model.php';
-            include '../view/processSignupForm.php';
             saveMemberInfo($FirstName, $LastName, $Age, $Email);
             $memberArray = getMembers();
-
+            include '../view/processSignupForm.php';
         }
     }
 

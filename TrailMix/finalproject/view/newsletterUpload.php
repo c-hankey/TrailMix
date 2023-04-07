@@ -1,7 +1,7 @@
 <?php
     $title = "Newsletter Upload";
     require_once '../view/header.php';
-    $filename = 'newsletterUpload.php';
+    $filename = '../view/newsletterUpload.php';
 ?>
 
 <section id="newsletterUpload">
@@ -12,14 +12,14 @@
 
                 <p>Note: Newsletter files should be in html file format.</p>
                 <form enctype="multipart/form-data"
-                    action="processFileUpload.php" method="post" class="my-3">
+                    action="../controller/controller.php?action=ProcessFileUpload" method="post" class="my-3">
                     Select a Newsletter File:
                     <input type="hidden" name="action" value="newsletterUpload">
                     <input type="file" name="userfile" accept=".html">
                     <input type="submit" value="Send File">
                 </form>
 
-                <a href="../DataFiles/newsletter.html" target="_blank" class="text-black">Click here to view the current newsletter file.</a>
+                <a href="../controller/controller.php?action=Newsletter" target="_blank" class="text-black">Click here to view the current newsletter file.</a>
             </div>
         </div>
     </div>

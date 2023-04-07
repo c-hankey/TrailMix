@@ -1,7 +1,7 @@
 <?php
     $title = "Image Upload";
     require_once '../view/header.php';
-    $filename = 'imageFileUpload.php';
+    $filename = '../view/imageFileUpload.php';
 ?>
 
 <section id="imageUpload">
@@ -12,7 +12,7 @@
 
                 <p>Note: Image files should be in the JPEG, GIF, or PNG format.</p>
                 <form enctype="multipart/form-data"
-                    action="imageProcessFile.php" method="post">
+                    action="../controller/controller.php?action=ProcessImage" method="post">
                     Select an Image File:
                     <input name="userfile" type="file" accept="image/png, image/jpeg, image/gif"/>
                     <input type="submit" value="Send File" />

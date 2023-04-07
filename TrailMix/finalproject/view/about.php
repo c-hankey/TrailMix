@@ -1,7 +1,7 @@
 <?php
     $title = "About";
     require_once '../view/header.php';
-    $filename = 'about.php';
+    $filename = '../view/about.php';
 ?>
 
 <section id="about">

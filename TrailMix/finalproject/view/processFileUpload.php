@@ -1,7 +1,7 @@
 <?php
     $title = "File Uploads";
     require_once '../view/header.php';
-    $filename = 'processFileUpload.php';
+    $filename = '../view/processFileUpload.php';
 ?>
 
 <section id="fileUpload">

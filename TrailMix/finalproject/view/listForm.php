@@ -1,7 +1,7 @@
 <?php
-$title = "All Trails";
+$title = "Table of Trails";
 require_once '../view/header.php';
-$filename = 'listForm.php';
+$filename = '../view/listForm.php';
 ?>
 
 <section id="trailList">
@@ -19,9 +19,10 @@ $filename = 'listForm.php';
 
             <tbody>
 
-            <?php $i=0;
-            foreach($results as $row) {
-                $i++
+            <?php
+                $i = 0;
+                foreach($results as $row) {
+                $i++;
                 ?>
 
                 <tr class="<?php echo ($i % 2 == 0)?"evenRow":"oddRow" ?>">

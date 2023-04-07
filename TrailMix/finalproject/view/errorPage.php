@@ -1,7 +1,7 @@
 <?php
 $title = 'Error';
 require_once '../view/header.php';
-$filename = 'errorMessage';
+$filename = '../view/errorPage.php';
 ?>
 
 <h1><?php echo $errorMessage ?></h1>

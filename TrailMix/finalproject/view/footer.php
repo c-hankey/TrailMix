@@ -19,7 +19,7 @@
 
     <div class="d-flex justify-content-center align-items-center">
         <p class="text-white mx-2 my-5">Click here to view our newsletter : </p>
-        <a href="../DataFiles/newsletter.html" target = _blank>
+        <a href="../controller/controller.php?action=Newsletter" target = _blank>
             <i class="fa-regular fa-newspaper text-white fa-xl"></i>
         </a>
     </div>

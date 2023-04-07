@@ -1,7 +1,7 @@
 <?php
 $title = "Trail Search";
 require_once '../view/header.php';
-$filename = 'searchTrails.php';
+$filename = '../view/searchTrails.php';
 ?>
 
 <section id="trailDisplay">

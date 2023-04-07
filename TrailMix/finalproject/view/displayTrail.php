@@ -1,7 +1,7 @@
 <?php
 $title = "Trail Details";
 require_once '../view/header.php';
-$filename = 'displayTrail.php';
+$filename = '../view/displayTrail.php';
 ?>
 
 <section id="trailDisplay">
@@ -36,7 +36,7 @@ $filename = 'displayTrail.php';
             <?php echo $row['Loops'] ?>
         </div><br>
         <div class="formRow">
-            <label><b><h5>Bike Accessable: </b></h5></label> </b>
+            <label><b><h5>Bike Accessable: </b></h5></label> <br>
             <?php echo $row['Bike'] ?>
         </div><br>
         <div class="formRow">

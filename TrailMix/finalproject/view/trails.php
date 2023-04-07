@@ -2,76 +2,33 @@
 <?php
     $title = "Trails";
     require_once '../view/header.php';
-    $filename = 'trails.php';
+    $filename = '../view/trails.php';
 ?>
 
 <section id="trails">
 
-    <div class="d-flex justify-content-center align-items-center flex-md-row">
-        <div class="card my-4 mx-4 trail-card">
-            <img src="../img/looptrail.jpg"  class="card-img-top" alt="loop trail image">
-            <div class="card-body">
-                <h5 class="card-title">Clarion Loop Trail</h5>
-                <p class="card-text"><strong>Clarion, PA</strong></p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Distance: 1.6 miles</li>
-                <li class="list-group-item">Difficulty: 2/5</li>
-            </ul>
-            <div class="card-body">
-                <a href="loop.php" class="card-link">Details</a>
-                <a href="https://www.visitpa.com/region/pennsylvania-wilds/clarion-loop-trail" class="card-link">Trail Website</a>
-            </div>
-        </div>
-        <div class="card my-4 mx-4 trail-card">
-            <img src="../img/bakertrail.jpg" class="card-img-top" alt="baker trail image">
-            <div class="card-body" >
-                <h5 class="card-title">Baker Trail</h5>
-                <p class="card-text"><strong>Cooksburg, PA</strong></p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Distance: 12 miles</li>
-                <li class="list-group-item">Difficulty: 4/5</li>
-            </ul>
-            <div class="card-body">
-                <a href="baker.php" class="card-link">Details</a>
-                <a href="https://visitpago.com/listings/baker-trail/#:~:text=In%20Cook%20Forest%2012%20miles,hiking%20trail%20traversing%20six%20counties."
-                   class="card-link">Trail Website</a>
-            </div>
-        </div>
+    <div class="row row-cols-4">
+        <?php
+            $i = 0;
+            foreach($results as $row) { ?>
+            <div class="col">
 
-        <div class="card my-4 mx-4 trail-card">
-            <img src="../img/nct.jpg" class="card-img-top" alt="north country trail image" height="208">
-            <div class="card-body" >
-                <h5 class="card-title">North Country Trail Clarion Trailhead</h5>
-                <p class="card-text"><strong>Clarion, PA</strong></p>
+                    <div class="card my-4 mx-4 trail-card">
+                        <img src="../DataFiles/TrailImages/<?php echo $row['TrailID'] ?>.jpg" class="card-img-top" alt="<?php echo $row['Name'] ?> image">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $row['Name'] ?></h5>
+                            <p class="card-text"><strong><?php echo $row['Location'] ?></strong></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Distance: <?php echo $row['Distance'] ?></li>
+                            <li class="list-group-item">Difficulty: <?php echo $row['Difficulty'] ?></li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="../controller/controller.php?action=TrailDetails&TrailID=<?php echo $row['TrailID'] ?>" class="card-link">Details</a>
+                        </div>
+                    </div>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Distance: 35 miles</li>
-                <li class="list-group-item">Difficulty: 3/5</li>
-            </ul>
-            <div class="card-body">
-                <a href="nct.php" class="card-link">Details</a>
-                <a href="https://northcountrytrail.org/trail/pennsylvania/cla/"
-                   class="card-link">Trail Website</a>
-            </div>
-        </div>
-
-        <div class="card my-4 mx-4 trail-card">
-            <img src="../img/tobecco.jpg" class="card-img-top" alt="tobecco trail image">
-            <div class="card-body" >
-                <h5 class="card-title">The Tobecco Trail</h5>
-                <p class="card-text"><strong>Clarington, PA</strong></p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Distance: 10 miles</li>
-                <li class="list-group-item">Difficulty: 3/5</li>
-            </ul>
-            <div class="card-body">
-                <a href="tobecco.php" class="card-link">Details</a>
-                <a href="https://visitpago.com/tobecco-trail/"
-                   class="card-link">Trail Website</a>
-            </div>
+        <?php $i++; } ?>
     </div>
 
 </section>

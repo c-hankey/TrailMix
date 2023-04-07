@@ -2,7 +2,7 @@
 <?php
     $title = "Register";
     require_once '../view/header.php';
-    $filename = 'signupForm.php';
+    $filename = '../view/signupForm.php';
 ?>
 
 <section id="signup">

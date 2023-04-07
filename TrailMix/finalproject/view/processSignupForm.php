@@ -1,7 +1,7 @@
 <?php
     $title = "Sign Up Processing";
     require_once '../view/header.php';
-    $filename = 'processSignupForm.php';
+    $filename = '../view/processSignupForm.php';
 ?>
 
 <section id="confirm">

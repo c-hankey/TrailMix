@@ -1,7 +1,7 @@
 <?php
 $title = "Upload Quote File";
 require_once '../view/header.php';
-$filename = 'quoteupload.php';
+$filename = '../view/quoteupload.php';
 ?>
 
 <section id="quote">
@@ -12,14 +12,14 @@ $filename = 'quoteupload.php';
 
                 <p>Note: Quote files should be in a text file format with a new line separating each quote.</p>
                 <form enctype="multipart/form-data"
-                      action="processFileUpload.php" method="post" class="my-3">
+                      action="../controller/controller.php?action=ProcessFileUpload" method="post" class="my-3">
                     Send this file:
                     <input type="hidden" name="action" value="quoteUpload">
                     <input type="file" name="userfile" accept=".txt">
                     <input type="submit" value="Send File">
                 </form>
 
-                <a href="../DataFiles/quotes.txt" target="_blank" class="text-black">Click here to view the current quotes file.</a>
+                <a href="../controller/controller.php?action=Quotes" target="_blank" class="text-black">Click here to view the current quotes file.</a>
             </div>
         </div>
     </div>

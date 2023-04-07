@@ -2,7 +2,7 @@
 <?php
     $title = "TrailMix";
     require_once '../view/header.php';
-    $filename = 'index.php';
+    $filename = '../view/index.php';
 ?>
 
 <section id="main">

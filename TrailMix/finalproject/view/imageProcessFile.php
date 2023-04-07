@@ -1,7 +1,7 @@
 <?php
     $title = "Image Processing";
     require_once '../view/header.php';
-    $filename = 'imageProcessFile.php';
+    $filename = '../view/imageProcessFile.php';
 ?>
 
 <section id="image">

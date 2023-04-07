@@ -17,7 +17,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trails</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../controller/controller.php?action=Trails">Trails</a> </li>
-                        <li><a class="dropdown-item" href="../controller/controller.php?action=ListTrails">All Trails</a> </li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=ListTrails">Table of Trails</a> </li>
                         <li><a class="dropdown-item" href="../controller/controller.php?action=SearchTrails">Search Trails</a> </li>
                     </ul>
                 </li>
@@ -32,14 +32,14 @@
                         <li><a class="dropdown-item" href="../controller/controller.php?action=EmailSend">Send Emails</a></li>
                         <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>
                         <li><a class = "dropdown-item" href="../controller/controller.php?action=ImageUpload">Image Upload</a></li>
-                        <li><a class="dropdown-item" href="../controller/controller.php?action=Quote">Quote Upload</a></li>
-                        <li><a class="dropdown-item" href="../controller/controller.php?action=Newsletter">Newsletter Upload</a></li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=QuoteUpload">Quote Upload</a></li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=NewsletterUpload">Newsletter Upload</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="../controller/controller.php?action=Grading">Grading</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../controller/controller.php?action?=Register">Register</a>
+                    <a class="nav-link" href="../controller/controller.php?action=Register">Register</a>
                 </li>
             </ul>
 

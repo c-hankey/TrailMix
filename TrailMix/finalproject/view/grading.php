@@ -1,70 +1,187 @@
 <?php
 $title = "Grading";
 require_once '../view/header.php';
-$filename = 'grading.php';
+$filename = '../view/grading.php';
 ?>
 
     <section id="grading">
 
         <div class="container-md my-4">
-            <table width="100%" class="table table-bordered">
-                <tbody>
-                <tr><th>Specific Requirement</th><th>How to Test<br/>(if not obvious)</th><th>Works Completely<br>(Yes/No)</th></tr>
-                <tr><td>1.	Header, Footer, and Nav included via PHP.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td>2.	All source files organized into proper folders.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td>3.	Automatic redirection from top of your web space to proper location for this assignment.</td><td>Start at vcisprod.pennwest.edu/~s_cmhankey1</td><td>Yes</td></tr>
-                <tr><td>4.	Email sign-up link in main navigation or on Home page.</td><td>Located under register link</td><td>Yes</td></tr>
-                <tr><td class="indent1">a.	Validate e-mail before saving on client and server.</td><td>Send an invalid email</td><td>Yes</td></tr>
-                <tr><td class="indent1">b.	New addresses successfully added.</td><td>Send a valid email</td><td>Yes</td></tr>
-                <tr><td class="indent1">c.	Success or error page responds when appropriate.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td>5.	File Management link in Admin menu.</td><td>Located under image upload, newsletter upload, and quote upload</td><td>Yes</td></tr>
-                <tr><td class="indent1">a.	Upload page provides a list of all current files in the directory.</td><td>Upload an image file</td><td>Yes</td></tr>
-                <tr><td class="indent1">b.  Proper permissions are set on server folders to allow uploads.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent1">c.	Newsletter-Type File Upload Mechanism</td><td>Located under newsletter upload</td><td>Yes</td></tr>
-                <tr><td class="indent2">i.	HTML self-contained file with fonts and colors.</td><td>Attached to the various newsletter links on the site</td><td>Yes</td></tr>
-                <tr><td class="indent2">ii.	File can be seen via link on home page showing most recently uploaded version.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent2">iii.  Appropriate use of accept attribute to limit file types.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent2">iv.  Upload gives error if not an HTML file.</td><td>Try a non-html file</td><td>Yes</td></tr>
-                <tr><td class="indent1">d.	Quote File Upload Mechanism</td><td>Located under quote upload</td><td>Yes</td></tr>
-                <tr><td class="indent2">i.	Text file with one line per quote.</td><td>Click the link under the form to view the current file</td><td>Yes</td></tr>
-                <tr><td class="indent2">ii.	Upload gives error if not a text file.</td><td>Try a non-text file</td><td>Yes</td></tr>
-                <tr><td class="indent2">iii.  Appropriate use of accept attribute.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent2">iv. Link on File Management page to see the current Quote File.</td><td>Located under form for quote upload</td><td>Yes</td></tr>
-                <tr><td class="indent1">e.	Image File Uploads</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent2">i.	Allow additional image files to upload.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent2">ii.	Only allow jpeg, gif, and png formats.</td><td>Try uploading something not in this format</td><td>Yes</td></tr>
-                <tr><td class="indent2">iii. On successful upload list all files.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent2">iv.	Newly uploaded images may appear on home page.</td><td>They will appear within the carousel</td><td>Yes</td></tr>
-                <tr><td class="indent2">v.	Validate and notify if image size matters.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent2">vi.  Appropriate use of accept attribute to limit file types.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td>6.	Sending of Bulk E-Mails</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent1">a.	Newsletter-Type file is body of the message.</td><td>Click send emails link</td><td>Yes</td></tr>
-                <tr><td class="indent1">b.	E-Mail is sent to all recipients that have signed up.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent1">c.	No recipient should be able to see the email address of others.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent1">d.	Confirmation page shows all addresses who received a message.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent1">e.	E-Mail is properly addressed to help avoid going to SPAM folders.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td>7.	In your footer, include a way to show the last date modified of each page.</td><td>Located on very bottom of the footer</td><td>Yes</td></tr>
-                <tr><td>8.	This sheet linked in to your site under the Admin menu.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td>9.	Make sure all pages on your site pass the <a href="https://validator.w3.org/">HTML5 conformance checker</a> and the <a href="https://jigsaw.w3.org/css-validator/">CSS validator</a>. Note that CSS errors from the Bootstrap Libraries are allowed.</td>
-                <td>Some errors show due to the iframe we use on the about and trail details pages. We will look into how to fix this for the next assignment and may change it to an image.</td><td>No</td></tr>
-                <tr><td>10.	Complete site published to vcisprod (including redirection).</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td class="indent1">a.	Create a .zip file of your whole site and turn it in to the appropriate folder on D2L.</td><td>&nbsp;</td><td>Yes</td></tr>
-                <tr><td></td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                <tr><th colspan="2">Extra Credit</th></tr>
-                <tr><td></td><td>&nbsp;</td><td>&nbsp;</td></tr>
-                <tr><td>11.	Provide a mechanism to delete unwanted image files.</td><td>&nbsp;</td><td>No</td></tr>
-                <tr><td>12.	Show a random quote in your footer.  The quote should
-                        come from the Quote file (above) that may be replaced via upload at any
-                        time by the user.</td><td>Reload pages to see several different quotes in the footer</td><td>Yes</td></tr>
-                <tr><td>13.	Include a "Remember Me" checkbox on e-mail signup page.</td><td>&nbsp;</td><td>No</td></tr>
-                <tr><td class="indent1">a.	Include a "Welcome First Name" in header if they wanted to be remembered on that machine.</td><td>&nbsp;</td><td>No</td></tr>
-                <tr><td>14.	When adding an e-mail address to receive messages, also
-                        validate that any new e-mail added does not already exist on the file
-                        before adding it.  If the address was already in the list, give them an
-                        appropriate message indicating this.</td><td>&nbsp;</td><td>No</td></tr>
-                <tr><td>15.	Allow multi-file selection of images in the upload.</td><td>&nbsp;</td><td>No</td></tr>
-                <tr><td>16.	Allow the Newsletter upload to be a PDF file and send it as an attachment to the email.</td><td>&nbsp;</td><td>No</td></tr>
-                </tbody>
+            <table width="100%" border="1" class="grade">
+                <tr>
+                    <th>CIS 370 Assignment 3 Specific Requirement</td>s
+                    <th>How to test this feature.</th>
+                    <th>Works Completely<br />
+                        (Yes/No)</th>
+                </tr>
+                <tr>
+                    <td>1. Convert your web application to use the simple MVC pattern demonstrated in class.</td>
+                    <td>Look at the URL when navigating</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">a. Add a controller.php that is called any time a request is made to a new page in your site.  </td>
+                    <td>Look at the URL when clicking something</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">b. Organize your model, view, and controller code in the appropriate folders.</td>
+                    <td>Look at the folder structure</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">c. Go back and modify the file processing pages (email registration) to use MVC and fix the links in your navigation system.</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>2. Create a database using phpMyAdmin.</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1"> a. Include at least 6 columns (or fields) with a
+                        variety of data types including at least one of each of the following:
+                        character string, date, integer, decimal, and Yes/No values.
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">b. Add at least 15 rows of data into that table.</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+
+                <tr>
+                    <td>3. Create a simple PHP page that will display a list of the most important
+                        columns for all rows in your table.</td>
+                    <td>Listed under the Trails dropdown under Table of Trails</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">a. Use an HTML table to show your column headings and
+                        data values.</td>
+                    <td>Look at our table</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">b. Add formatting where appropriate for numbers (right justify), dates, phone
+                        numbers, SSNs, Y/N values, etc...</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>4. Make a page that allows the user to Search for subsets of your records.</td>
+                    <td>Under the Search Trails in the Trails dropdown</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">a. Search using a Selection box with values pre-loaded
+                        in a logical order (like a dropdown of names in alphabetical order).</td>
+                    <td>Look at dropdown under Search Trails</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">b. A general search that searches all character fields
+                        for any subset of characters.</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">c. Links to show natural subsets of the data (like &quot;Clearance
+                        Items&quot; or &quot;New Listings&quot;).</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">d. Never show a list of only one item.  If a search results in only one item
+                        matching, automatically proceed to the details view if only one item is found.</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>5. Make a page that shows a Details view of a single row of your data.</td>
+                    <td>We have two - one in the hyper link on the table and one in the details link under the Trails > Trails dropdown</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">a. Listing screen should automatically link to this
+                        screen passing primary key as a querystring parameter.</td>
+                    <td>Look in URL when navigating</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">c. Include the display of your binary data (or player or link if no visual component).  </td>
+                    <td>Under the Trails > Trails dropdown</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>6. Use PHP Data Objects instead of the mysql or mysqli interfaces to
+                        access your data.</td>
+                    <td>Look in our model</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td class="indent1">a. Use prepared statements to execute your parameterized
+                        queries to avoid SQL injection.</td>
+                    <td>Try typing something in the URL that is harmful</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>7. This sheet linked in to your site under the Admin menu and filled
+                        out properly so I can grade it.</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>8. Complete site published to vcisprod (including
+                        redirection to this assignment).</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="indent1">a. Create a .zip file of your whole site and turn it in to the appropriate folder on D2L.</td>
+                    <td>&nbsp;</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td colspan="3" bgcolor="#CCCCCC"> <div align="center"><strong><font size="+1">Extra
+                                    Credit</font></strong></div></td>
+                </tr>
+                <tr>
+                    <td>9. Add a second table in your database to keep track of category-type information that you can use to feed into a selection box.  </td>
+                    <td>&nbsp;</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>10. Make your general search mechanisms work for date ranges and numeric column matches as well as searching your string data fields.</td>
+                    <td>&nbsp;</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>11. Include a mechanism to choose an initial sort order for the list entries whenever
+                        you search your records.</td>
+                    <td>&nbsp;</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td class="indent1">a. The sort order should default to a natural (or common)
+                        value and affect the results regardless of which mechanism they used to create the list.</td>
+                    <td>&nbsp;</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td class="indent1">b. This must be a server-side sort (from the database) and avoid SQL Injection attacks.</td>
+                    <td>&nbsp;</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>12. Allow the user to click any of the column headers to sort the data
+                        shown on the client-side.</td>
+                    <td>&nbsp;</td>
+                    <td>No</td>
+                </tr>
             </table>
         </div>
 

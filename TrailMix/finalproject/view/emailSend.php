@@ -2,7 +2,7 @@
 require_once 'Mail.php';
 $title = "Send Emails";
 require_once '../view/header.php';
-$filename = 'emailSend.php';
+$filename = '../view/emailSend.php';
 ?>
 <h1>Sending Emails</h1>
 

@@ -24,7 +24,7 @@
         <div class = "container align-items-center">
             <div class="row">
             <div class = "col">
-                <a href="../DataFiles/newsletter.html" target = _blank> <img src = "../img/newspaper.png" alt="newspaper image"></a>
+                <a href="../controller/controller.php?action=Newsletter" target = _blank> <img src = "../img/newspaper.png" alt="newspaper image"></a>
             </div>
 
             <div class = "col">
