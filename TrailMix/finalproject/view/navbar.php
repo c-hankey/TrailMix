@@ -19,6 +19,7 @@
                         <li><a class="dropdown-item" href="../controller/controller.php?action=Trails">Trails</a> </li>
                         <li><a class="dropdown-item" href="../controller/controller.php?action=ListTrails">Table of Trails</a> </li>
                         <li><a class="dropdown-item" href="../controller/controller.php?action=SearchTrails">Search Trails</a> </li>
+                        <li><a class="dropdown-item" href="../controller/controller.php?action=AddTrail">Add Trail</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

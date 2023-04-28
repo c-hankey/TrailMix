@@ -16,6 +16,9 @@
         case 'About':
             include '../view/about.php';
             break;
+        case 'AddTrail':
+            addTrail();
+            break;
         case 'DisplayTrail':
             displayTrail();
             break;
@@ -58,6 +61,9 @@
         case 'ProcessRegisterMember':
             processRegisterMember();
             break;
+        case 'ProcessAndEdit':
+            processAddEdit();
+            break;
         case 'Register':
             include '../view/signupForm.php';
             break;
@@ -69,6 +75,22 @@
             break;
         default:
             include('../view/index.php');   // default
+    }
+
+    function addTrail(){
+        $mode = "add";
+        $name = "";
+        $description = "";
+        $location = "";
+        $distance = 0;
+        $difficulty = 0;
+        $date = "";
+        $loop = "Y";
+        $bike = "Y";
+        $activehours = "All";
+        $activeseason = "All";
+
+        include '../view/editTrail.php';
     }
 
     function displayTrail() {
@@ -131,6 +153,54 @@
         }
         else {
             include '../view/listForm.php';
+        }
+    }
+
+    function processAddEdit(){
+        $name = $_POST['Name'];
+        $description = $_POST['Description'];
+        $location = $_POST['Location'];
+        $distance = $_POST['Distance'];
+        $difficulty = $_POST['Difficulty'];
+        if(isset($_POST['Loop'])){
+            $loop = 'Y';
+        }
+        else
+            $loop = 'N';
+        if(isset($_POST['Bike'])){
+            $bike = 'Y';
+        }
+        else
+            $bike = 'N';
+        $activehours = $_POST['ActiveHours'];
+        $activeseason = $_POST['ActiveSeason'];
+
+        //Validations
+        $php_errormsg = "";
+        if(empty($name) || strlen($name) > 30){
+            $php_errormsg .= "\\n* Name is required and must be less than 30 characters long.";
+        }
+        if(empty($description)){
+            $php_errormsg .= "\\n* Description is required.";
+        }
+        if(empty($location) || strlen($location) > 20){
+            $php_errormsg .= "\\n* Location is required and must be less than 20 characters long.";
+        }
+        if(!empty($difficulty) && !ctype_digit($difficulty) || $difficulty > 5){
+            $php_errormsg .= "\\n* Difficulty must be a positive integer (whole number without decimals) and between 1 and 5. Enter 0 if unknown.";
+        }
+        else if(!empty($distance) && !ctype_digit(($distance))){
+            $php_errormsg .= "\\n* Distance must be a positive integer (whole number without decimals). Enter 0 if unknown.";
+            $distance = 0;
+        }
+        if(empty($activehours) || strlen($activehours) > 30){
+            $php_errormsg .= "\\n* Active trail hours are required and must be less than 30 characters long.";
+        }
+        if(empty($activeseason) || strlen($activeseason) > 30){
+            $php_errormsg .= "\\n* The active season is required and must be less than 30 characters long.";
+        }
+        if($php_errormsg != ""){
+            include '../view/editTrail.php';
         }
     }
 
