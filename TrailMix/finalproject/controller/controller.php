@@ -19,8 +19,14 @@
         case 'AddTrail':
             addTrail();
             break;
+        case 'DeleteTrail':
+            deleteTrail();
+            break;
         case 'DisplayTrail':
             displayTrail();
+            break;
+        case 'EditTrail':
+            editTrail();
             break;
         case 'EmailSend':
             include '../view/emailSend.php';
@@ -78,7 +84,8 @@
     }
 
     function addTrail(){
-        $mode = "add";
+        $mode = "Add";
+        $trailID = 0;
         $name = "";
         $description = "";
         $location = "";
@@ -91,6 +98,22 @@
         $activeseason = "All";
 
         include '../view/editTrail.php';
+    }
+
+    function deleteTrail(){
+        $trailID = $_GET['TrailID'];
+        if(!isset($trailID)) {
+            $errorMessage = "You must provide a trail ID to display.";
+            include '../view/errorPage.php';
+        } else {
+            $rowCount = deleteOneTrail($trailID);
+            if($rowCount != 1) {
+                $errorMessage = "The delete affected $rowCount rows.";
+                include "../view/errorPage.php";
+            } else {
+                header("Location:../controller/controller.php?action=Home");
+            }
+        }
     }
 
     function displayTrail() {
@@ -129,6 +152,36 @@
         }
     }
 
+    function editTrail() {
+        $trailID = $_GET['TrailID'];
+        if(!isset($trailID)){
+            $errorMessage = "You must provide a trail ID to display.";
+            include '../view/errorPage.php';
+        }
+        else {
+            $row = getTrail($trailID);
+            if($row == FALSE){
+                $errorMessage = "That trail was not found";
+                include '../view/errorPage.php';
+            }
+            else {
+                $mode = "Edit";
+                $trailID = $row['TrailID'];
+                $name = $row['Name'];
+                $description = $row['Description'];
+                $location = $row['Location'];
+                $distance = $row['Distance'];
+                $difficulty = $row['Difficulty'];
+                $date = $row['DateAdded'];
+                $loop = $row['Loops'];
+                $bike = $row['Bike'];
+                $activehours = $row['ActiveHours'];
+                $activeseason = $row['ActiveSeason'];
+                include '../view/editTrail.php';
+            }
+        }
+    }
+
     function listTrails(){
         $listType = filter_input(INPUT_GET, 'ListType');
         if($listType == 'LoopTrail'){
@@ -158,6 +211,8 @@
 
     function processAddEdit(){
         $name = $_POST['Name'];
+        $trailID = $_POST['TrailID'];
+        $mode = $_POST['Mode'];
         $description = $_POST['Description'];
         $location = $_POST['Location'];
         $distance = $_POST['Distance'];
@@ -201,6 +256,13 @@
         }
         if($php_errormsg != ""){
             include '../view/editTrail.php';
+        } else {
+            if($mode == 'Add') {
+                $trailID = insertTrail($name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason);
+            } else {
+                $rowsAffected = updateTrail($trailID, $name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason);
+            }
+            header("Location:../controller/controller.php?action=DisplayTrail&TrailID=$trailID");
         }
     }
 
