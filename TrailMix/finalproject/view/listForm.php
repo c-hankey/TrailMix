@@ -28,12 +28,12 @@ $filename = '../view/listForm.php';
                 <tr class="<?php echo ($i % 2 == 0)?"evenRow":"oddRow" ?>">
                     <td>
                         <a href="../controller/controller.php?action=DisplayTrail&TrailID=<?php echo $row['TrailID'] ?>">
-                            <?php echo $row['Name'] ?>
+                            <?php echo htmlspecialchars($row['Name']) ?>
                         </a>
                     </td>
-                    <td><?php echo $row['Location'] ?></td>
-                    <td class="right"><?php echo $row['Distance'] ?></td>
-                    <td class="right"><?php echo $row['Difficulty'] ?></td>
+                    <td><?php echo htmlspecialchars($row['Location']) ?></td>
+                    <td class="right"><?php echo htmlspecialchars($row['Distance']) ?></td>
+                    <td class="right"><?php echo htmlspecialchars($row['Difficulty']) ?></td>
                     <td class="text-center"><?php echo toDisplayDate($row['DateAdded']) ?></td>
                 </tr>
 

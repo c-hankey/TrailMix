@@ -9,7 +9,7 @@
         <div class = "flex-column">
             <div class = "container">
                 <h1>Description: <br></h1>
-                <h6><?php echo $row['Description'] ?></h6>
+                <h6><?php echo htmlspecialchars($row['Description']) ?></h6>
             </div>
             <table class="table table-bordered m-3 align-self-start">
                 <thead>
@@ -25,20 +25,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><?php echo $row['Name'] ?></td>
-                        <td><?php echo $row['Difficulty'] ?>/5</td>
-                        <td><?php echo $row['Distance'] ?></td>
-                        <td><?php echo $row['Loops'] ?></td>
-                        <td><?php echo $row['Bike'] ?></td>
-                        <td><?php echo $row['ActiveHours'] ?></td>
-                        <td><?php echo $row['ActiveSeason'] ?></td>
+                        <td><?php echo htmlspecialchars($row['Name']) ?></td>
+                        <td><?php echo htmlspecialchars($row['Difficulty']) ?>/5</td>
+                        <td><?php echo htmlspecialchars($row['Distance']) ?></td>
+                        <td><?php echo htmlspecialchars($row['Loops']) ?></td>
+                        <td><?php echo htmlspecialchars($row['Bike']) ?></td>
+                        <td><?php echo htmlspecialchars($row['ActiveHours']) ?></td>
+                        <td><?php echo htmlspecialchars($row['ActiveSeason']) ?></td>
                     </tr>
                 </tbody>
             </table>
 
         </div>
         <div style="width: 75%" class="m-3 px-3">
-            <img src="../DataFiles/TrailImages/<?php echo $row['TrailID'] ?>.jpg" alt="<?php echo $row['Name'] ?> image">
+            <img src="../DataFiles/TrailImages/<?php echo $row['TrailID'] ?>.jpg" alt="<?php echo htmlspecialchars($row['Name']) ?> image">
         </div>
 
     </div>
