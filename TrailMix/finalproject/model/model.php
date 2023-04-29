@@ -1,9 +1,9 @@
 <?php
 
     function getDBConnection() {
-        $dsn = 'mysql:host=localhost;dbname=s_djhackenbe';
-        $username = 's_djhackenbe';
-        $password = 's_djhackenbe';
+        $dsn = 'mysql:host=localhost;dbname=s_cmhankey1';
+        $username = 's_cmhankey1';
+        $password = 's_cmhankey1';
         try {
             $db = new PDO($dsn, $username, $password);
         } catch (PDOException $e) {
@@ -30,54 +30,54 @@
         }
     }
 
-function getLoopTrails() {
-    try {
-        $db = getDBConnection();
-        $query = "select * from trail where Loops = 'Y' ORDER BY Name";
-        $statement = $db->prepare($query);
-        $statement->execute();
-        $results = $statement->fetchAll();
-        $statement->closeCursor();
-        return $results; // Array of Rows
-    } catch (PDOException $e) {
-        $errorMessage = $e->getMessage();
-        include '../view/errorPage.php';
-        die;
+    function getLoopTrails() {
+        try {
+            $db = getDBConnection();
+            $query = "select * from trail where Loops = 'Y' ORDER BY Name";
+            $statement = $db->prepare($query);
+            $statement->execute();
+            $results = $statement->fetchAll();
+            $statement->closeCursor();
+            return $results; // Array of Rows
+        } catch (PDOException $e) {
+            $errorMessage = $e->getMessage();
+            include '../view/errorPage.php';
+            die;
+        }
     }
-}
 
-function getEasyTrails() {
-    try {
-        $db = getDBConnection();
-        $query = "select * from trail where Difficulty < 3 ORDER BY Name";
-        $statement = $db->prepare($query);
-        $statement->execute();
-        $results = $statement->fetchAll();
-        $statement->closeCursor();
-        return $results; // Array of Rows
-    } catch (PDOException $e) {
-        $errorMessage = $e->getMessage();
-        include '../view/errorPage.php';
-        die;
+    function getEasyTrails() {
+        try {
+            $db = getDBConnection();
+            $query = "select * from trail where Difficulty < 3 ORDER BY Name";
+            $statement = $db->prepare($query);
+            $statement->execute();
+            $results = $statement->fetchAll();
+            $statement->closeCursor();
+            return $results; // Array of Rows
+        } catch (PDOException $e) {
+            $errorMessage = $e->getMessage();
+            include '../view/errorPage.php';
+            die;
+        }
     }
-}
 
-function getByGeneralSearch($criteria){
-    try {
-        $db = getDBConnection();
-        $query = "select * from trail where Name like :criteria OR Location like :criteria ORDER BY Name";
-        $statement = $db->prepare($query);
-        $statement->bindValue(':criteria', "%$criteria%");
-        $statement->execute();
-        $results = $statement->fetchAll();
-        $statement->closeCursor();
-        return $results; // Array of Rows
-    } catch (PDOException $e) {
-        $errorMessage = $e->getMessage();
-        include '../view/errorPage.php';
-        die;
+    function getByGeneralSearch($criteria){
+        try {
+            $db = getDBConnection();
+            $query = "select * from trail where Name like :criteria OR Location like :criteria ORDER BY Name";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':criteria', "%$criteria%");
+            $statement->execute();
+            $results = $statement->fetchAll();
+            $statement->closeCursor();
+            return $results; // Array of Rows
+        } catch (PDOException $e) {
+            $errorMessage = $e->getMessage();
+            include '../view/errorPage.php';
+            die;
+        }
     }
-}
 
     function getTrail($trailID) {
         try {
@@ -110,6 +110,55 @@ function getByGeneralSearch($criteria){
         }
         fclose($file);
         return $memberArray;
+    }
+
+    function insertTrail($name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason){
+        //Insert code to add a trail to database here
+    }
+
+    function updateTrail($trailID, $name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason) {
+        $db = getDBConnection();
+        $query = 'UPDATE trail SET Name = :Name, Description = :Description, Location = :Location, Distance = :Distance,
+                  Difficulty = :Difficulty, Loops = :Loop, Bike = :Bike, ActiveHours = :ActiveHours, ActiveSeason = :ActiveSeason
+                  WHERE TrailID = :TrailID';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':Name', $name);
+        $statement->bindValue(':Description', $description);
+        $statement->bindValue(':Location', $location);
+        $statement->bindValue(':Distance', $distance);
+        $statement->bindValue(':Difficulty', $difficulty);
+        $statement->bindValue(':Loop', $loop);
+        $statement->bindValue(':Bike', $bike);
+        $statement->bindValue(':ActiveHours', $activehours);
+        $statement->bindValue(':ActiveSeason', $activeseason);
+        $statement->bindValue(':TrailID', $trailID);
+
+        $success = $statement->execute();
+        $statement->closeCursor();
+        if($success) {
+            return $statement->rowCount();
+        } else {
+            logSQLError($statement->errorInfo());
+        }
+    }
+
+    function deleteOneTrail($trailID) {
+        $db = getDBConnection();
+        $query = 'DELETE FROM trail
+                  WHERE TrailID = :TrailID';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':TrailID', $trailID);
+        $success = $statement->execute();
+        $statement->closeCursor();
+        if ($success) {
+            return $statement->rowCount(); // Number of rows affected
+        } else {
+            logSQLError($statement->errorInfo()); // Log error
+        }
+    }
+
+    function logSQLError($error) {
+        $errorMessage = $error[2];
     }
 
 ?>
