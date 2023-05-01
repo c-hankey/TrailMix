@@ -177,6 +177,7 @@
                 $bike = $row['Bike'];
                 $activehours = $row['ActiveHours'];
                 $activeseason = $row['ActiveSeason'];
+                $tempImageFilePath = $row['TrailImagePath'];
                 include '../view/editTrail.php';
             }
         }
@@ -230,6 +231,13 @@
         $activehours = $_POST['ActiveHours'];
         $activeseason = $_POST['ActiveSeason'];
 
+        $tempImageFilePath = "";
+        if(isset($_POST['DeleteImage'])){
+            $deleteImage = TRUE;
+        } else {
+            $deleteImage = FALSE;
+        }
+
         //Validations
         $php_errormsg = "";
         if(empty($name) || strlen($name) > 30){
@@ -254,13 +262,30 @@
         if(empty($activeseason) || strlen($activeseason) > 30){
             $php_errormsg .= "\\n* The active season is required and must be less than 30 characters long.";
         }
+
+        if($_FILES['ImageFile']['error'] != UPLOAD_ERR_NO_FILE){
+            //Check to see if they upload an image and if so, validate it
+            $image_info = getimagesize($_FILES['ImageFile']['tmp_name']);
+            $image_width = $image_info[0];
+            $image_height = $image_info[1];
+            $image_type = $image_info[2];
+            if($image_type != IMAGETYPE_JPEG) {
+                $php_errormsg .= "\\n* Only jpg images are supported. Please choose another file type.";
+            } else if($_FILES['ImageFile']['size'] > 1000000){
+                $php_errormsg .= "\\n* Please choose a file under 100KB and try again.";
+            } else {
+                $tempImageFilePath = $_FILES['ImageFile']['tmp_name'];
+            }
+
+        }
+
         if($php_errormsg != ""){
             include '../view/editTrail.php';
         } else {
             if($mode == 'Add') {
-                $trailID = insertTrail($name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason);
+                $trailID = insertTrail($name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason, $tempImageFilePath);
             } else {
-                $rowsAffected = updateTrail($trailID, $name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason);
+                $rowsAffected = updateTrail($trailID, $name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason, $tempImageFilePath, $deleteImage);
             }
             header("Location:../controller/controller.php?action=DisplayTrail&TrailID=$trailID");
         }
