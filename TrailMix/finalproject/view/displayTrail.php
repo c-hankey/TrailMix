@@ -9,7 +9,6 @@ $filename = '../view/displayTrail.php';
             <h1><b>Trail Details</b></h1>
             <div class="row">
                 <div class="col-md-6">
-
                     <div class="formRow">
                     <label><b><h5>Trail Name:</b></h5></label> <br>
                     <?php echo htmlspecialchars($row['Name']) ?>
@@ -69,8 +68,7 @@ $filename = '../view/displayTrail.php';
             </div>
 
             <div class="col-md-6">
-                <img width = 90% src="../DataFiles/TrailImages/<?php echo $row['TrailID'] ?>.jpg"
-                     alt="<?php echo htmlspecialchars($row['Name']) ?> image">
+                <img width = 90% src="<?php echo $row['TrailImagePath'] ?>?foolcache=<?php echo time() ?>">
             </div>
         </div>
 
