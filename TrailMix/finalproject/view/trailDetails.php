@@ -35,11 +35,13 @@
                     </tr>
                 </tbody>
             </table>
-
         </div>
+
+        <?php if($row['TrailImagePath'] != "") { ?>
         <div style="width: 75%" class="m-3 px-3">
             <img src="../DataFiles/TrailImages/<?php echo $row['TrailID'] ?>.jpg" alt="<?php echo htmlspecialchars($row['Name']) ?> image">
         </div>
+        <?php } ?>
 
     </div>
 </section>

@@ -60,16 +60,22 @@ $filename = '../view/displayTrail.php';
                 </div>
                 <br>
                 <div class="formRow">
-                    <input type="button" name="EditButton" id="EditButton" value="Edit"
+                    <?php if(userIsAuthorized("EditTrail")) { ?>
+                        <input type="button" name="EditButton" id="EditButton" value="Edit"
                            onclick="document.location='../controller/controller.php?action=EditTrail&TrailID=<?php echo $row['TrailID'] ?>'"/>
-                    <input type="button" name="DeleteButton" id="DeleteButton" value="Delete" style="margin-left: 15px;"
+                    <?php }
+                    if(userIsAuthorized("DeleteTrail")) { ?>
+                        <input type="button" name="DeleteButton" id="DeleteButton" value="Delete" style="margin-left: 15px;"
                            onclick="document.location='../controller/controller.php?action=DeleteTrail&TrailID=<?php echo $row['TrailID'] ?>'"/>
+                    <?php } ?>
                 </div>
             </div>
 
+            <?php if($row['TrailImagePath'] != "") { ?>
             <div class="col-md-6">
                 <img width = 90% src="<?php echo $row['TrailImagePath'] ?>?foolcache=<?php echo time() ?>">
             </div>
+            <?php } ?>
         </div>
 
     </section>

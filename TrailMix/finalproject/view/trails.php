@@ -2,6 +2,7 @@
 <?php
     $title = "Trails";
     require_once '../view/header.php';
+    require_once '../lib/general_func.php';
     $filename = '../view/trails.php';
 ?>
 
@@ -14,7 +15,10 @@
             <div class="col">
 
                     <div class="card my-4 mx-4 trail-card">
+                        <?php $imageFilePath = checkTrailImagePathCard($row['TrailID']);
+                        if($imageFilePath != "") { ?>
                         <img src="../DataFiles/TrailImages/<?php echo $row['TrailID'] ?>.jpg" class="card-img-top" alt="<?php echo $row['Name'] ?> image">
+                        <?php } ?>
                         <div class="card-body">
                             <h5 class="card-title"><?php echo htmlspecialchars($row['Name']) ?></h5>
                             <p class="card-text"><strong><?php echo htmlspecialchars($row['Location']) ?></strong></p>
