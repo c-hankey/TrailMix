@@ -33,7 +33,7 @@ require '../view/header.php';
                         <div class="formRow">
                             <label for="Distance"><b><h5>Distance:<span class="required">*</span></b></h5></label> <br>
                             <input type="number" name="Distance" id="Distance" value="<?php echo htmlspecialchars($distance) ?>"
-                                   size="2" maxlength="1" min="0"/>
+                                   size="2" maxlength="1" min="0" step="any"/>
                         </div>
                         <br>
                         <div class="formRow">

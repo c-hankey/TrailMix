@@ -138,7 +138,29 @@
     }
 
     function insertTrail($name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason, $tempImageFilePath){
-        //Insert code to add a trail to database here
+        $db = getDBConnection();
+        $query = 'INSERT INTO beer (Name, Brewery, Style, Alcohol, IBU, Local, AvailableSince)
+			VALUES (:Name, :Brewery, :Style, :Alcohol, :IBU, :Local, :AvailableSince)';
+        $statement = $db->prepare($query);
+
+        $statement->bindValue(':Name', $name);
+        $statement->bindValue(':Description', $description);
+        $statement->bindValue(':Location', $location);
+        $statement->bindValue(':Distance', $distance);
+        $statement->bindValue(':Difficulty', $difficulty);
+        $statement->bindValue(':Loops', $loop);
+        $statement->bindValue(':Bike', $bike);
+        $statement->bindValue(':ActiveHours', $activehours);
+        $statement->bindValue(':ActiveSeason', $activeseason);
+        if (empty($availableSince)){		// Date may be blank so store a Null
+            $statement->bindValue(':AvailableSince', null, PDO::PARAM_NULL);
+        } else {
+            $statement->bindValue(':AvailableSince', toMySQLDate($availableSince));
+        }
+
+        $success = $statement->execute();
+        $statement->closeCursor();
+
 
         //Uncomment this code for the success-- it was touched on in a later lecture
         /*if($succes) {

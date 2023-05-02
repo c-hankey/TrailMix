@@ -8,6 +8,14 @@
         }
     }
 
+    function toMySQL($date){
+        if($phpDate = strtotime($date)){
+            return date('Y/m/d', $phpDate);
+        }else {
+            return "";
+        }
+    }
+
     function getTrailImagePathCard($trailID) {
         $trailImageDirectory = "../DataFiles/TrailImages";
         return $trailFilePath = "$trailImageDirectory/$trailID.jpg";
