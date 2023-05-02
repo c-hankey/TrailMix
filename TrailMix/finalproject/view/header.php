@@ -18,7 +18,18 @@
 <body>
     <div class="container-fluid back-green">
         <div class="d-flex justify-content-end align-items-start pt-2">
-            <button class="btn btn-outline-light">Login</button>
+            <button class="btn btn-outline-light"
+                    onclick="location.href='<?php if(!loggedIn()){
+                echo '../security/index.php?action=SecurityLogin&RequestedPage=' . urlencode($_SERVER["REQUEST_URI"]) . '';
+            } else {
+                echo '../security/index.php?action=SecurityLogOut&RequestedPage=' . urlencode($_SERVER["REQUEST_URI"]) . '';
+            } ?>'">
+                <?php if(!loggedIn()){
+                    echo "Login";
+                } else {
+                    echo "Logout ".$_SESSION['UserName'];
+                } ?>
+            </button>
         </div>
 
         <div class = "container align-items-center">

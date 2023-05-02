@@ -30,13 +30,20 @@
                         Admin
                     </a>
                     <ul class="dropdown-menu">
+                        <?php if(userIsAuthorized("EmailSend")) { ?>
                         <li><a class="dropdown-item" href="../controller/controller.php?action=EmailSend">Send Emails</a></li>
-                        <li><a class="dropdown-item" href="undercontruction.php">Security</a></li>
+                        <?php } ?>
+                        <li><a class="dropdown-item" href="../security/index.php">Security</a></li>
+                        <?php if(userIsAuthorized("ImageUpload")) { ?>
                         <li><a class = "dropdown-item" href="../controller/controller.php?action=ImageUpload">Image Upload</a></li>
+                        <?php }
+                        if(userIsAuthorized("QuoteUpload")) { ?>
                         <li><a class="dropdown-item" href="../controller/controller.php?action=QuoteUpload">Quote Upload</a></li>
-                        <li><a class="dropdown-item" href="../controller/controller.php?action=NewsletterUpload">Newsletter Upload</a></li>
+                        <?php }
+                        if(userIsAuthorized("Grading")) { ?>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="../controller/controller.php?action=Grading">Grading</a></li>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li class="nav-item">
