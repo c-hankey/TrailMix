@@ -9,7 +9,7 @@ require '../view/header.php';
             <div class="row">
                 <div class="col-md-6">
                     <form id="TrailForm" action="../controller/controller.php?action=ProcessAndEdit" method="post"
-                        onsubmit="return validateForm()" multipart/form-data">
+                        onsubmit="return validateForm()" enctype="multipart/form-data">
                         <input type="hidden" name="TrailID" value="<?php echo $trailID ?>">
                         <input type="hidden" name="Mode" value="<?php echo htmlspecialchars($mode) ?>">
                         <div class="formRow">
@@ -42,11 +42,11 @@ require '../view/header.php';
                                    size="5" maxlength="1" min="0"/>
                         </div>
                         <br>
-                        <!--<div class="formRow">
+                        <div class="formRow">
                             <label><b><h5>Date Added:</b></h5></label> <br>
-                            <input type="text" name="DateAdded" id="DateAdded" value="<?php //echo $date?>"/>
+                            <input type="date" name="DateAdded" id="DateAdded" value="<?php echo $date?>" />
                         </div>
-                        <br>-->
+                        <br>
                         <div class="formRow">
                             <label for="Loops"><b><h5>Loop Trail:</b></h5></label> <br>
                             <input type="checkbox" name="Loops" id="Loops" <?php if($loop == 'Y') echo 'checked' ?>/>
@@ -72,7 +72,7 @@ require '../view/header.php';
                             <input type="file" name="ImageFile" id="ImageFile" />
                         </div>
 
-                        <?php if($tempImageFilePath != "") { ?>
+                        <?php if($mode == "Edit" && $tempImageFilePath != "") { ?>
                         <br>
                         <div class="formRow">
                             <label for="DeleteImage"><b><h5>Delete Image:</b></h5></label> <br>
@@ -87,13 +87,13 @@ require '../view/header.php';
                     </form>
                 </div>
 
-                <?php if($tempImageFilePath != "") { ?>
+                <?php if($mode == "Edit" && $tempImageFilePath != "") { ?>
                 <div class="col-md-6">
                     <img width = 90% src="<?php echo $tempImageFilePath ?>?foolcache=<?php echo time() ?>">
                 </div>
                 <?php } ?>
             </div>
-        </div>h
+        </div>
         <script>
             <?php
                 if(!empty($php_errormsg)){
@@ -102,12 +102,12 @@ require '../view/header.php';
             ?>
 
             function validateForm(){
-                var distance = $('$Distance').val();
-                var difficulty = $('$Difficulty').val();
+                var distance = $('#Distance').val();
+                var difficulty = $('#Difficulty').val();
 
                 if(distance > 10 && difficulty < 3){
-                    alert('A trail over 10 miles should be considered a trail with higher difficulty.')
-                    $('$Difficulty').select();
+                    alert('A trail over 10 miles should have a higher difficulty.')
+                    $('#Difficulty').select();
                     return false;
                 }
                 return true;

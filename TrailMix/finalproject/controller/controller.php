@@ -1,6 +1,7 @@
 <?php
     require_once '../model/model.php';
     require_once '../lib/general_func.php';
+    require_once '../security/model.php';
 
     if (isset($_POST['action'])) {  // check get and post
         $action = $_POST['action'];
@@ -218,6 +219,7 @@
         $location = $_POST['Location'];
         $distance = $_POST['Distance'];
         $difficulty = $_POST['Difficulty'];
+        $date = $_POST['DateAdded'];
         if(isset($_POST['Loop'])){
             $loop = 'Y';
         }
@@ -288,7 +290,8 @@
             include '../view/editTrail.php';
         } else {
             if($mode == 'Add') {
-                $trailID = insertTrail($name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason, $tempImageFilePath);
+                $trailID = insertTrail($name, $description, $location, $distance, $difficulty, $date, $loop, $bike, $activehours, $activeseason, $tempImageFilePath);
+                header("Location:../controller/controller.php?action=DisplayTrailID&TrailID=$trailID");
             } else {
                 $rowsAffected = updateTrail($trailID, $name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason, $tempImageFilePath, $deleteImage);
             }

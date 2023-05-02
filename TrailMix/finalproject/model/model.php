@@ -137,10 +137,10 @@
         }
     }
 
-    function insertTrail($name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason, $tempImageFilePath){
+    function insertTrail($name, $description, $location, $distance, $difficulty, $date, $loop, $bike, $activehours, $activeseason, $tempImageFilePath){
         $db = getDBConnection();
-        $query = 'INSERT INTO beer (Name, Brewery, Style, Alcohol, IBU, Local, AvailableSince)
-			VALUES (:Name, :Brewery, :Style, :Alcohol, :IBU, :Local, :AvailableSince)';
+        $query = 'INSERT INTO trail (Name, Description, Location, Distance, Difficulty, DateAdded, Loops, Bike, ActiveHours, ActiveSeason)
+			VALUES (:Name, :Description, :Location, :Distance, :Difficulty, :Date, :Loops, :Bike, :ActiveHours, :ActiveSeason)';
         $statement = $db->prepare($query);
 
         $statement->bindValue(':Name', $name);
@@ -152,23 +152,17 @@
         $statement->bindValue(':Bike', $bike);
         $statement->bindValue(':ActiveHours', $activehours);
         $statement->bindValue(':ActiveSeason', $activeseason);
-        if (empty($availableSince)){		// Date may be blank so store a Null
-            $statement->bindValue(':AvailableSince', null, PDO::PARAM_NULL);
-        } else {
-            $statement->bindValue(':AvailableSince', toMySQLDate($availableSince));
-        }
+        $statement->bindValue(':Date', $date);
 
         $success = $statement->execute();
         $statement->closeCursor();
 
-
-        //Uncomment this code for the success-- it was touched on in a later lecture
-        /*if($succes) {
-            saveTrailImageFile($db->lastInsetId(), $tempImageFilePath);
+        if($success) {
+            saveTrailImageFile($db->lastInsertId(), $tempImageFilePath);
             return $db->lastInsertId();
         } else {
             logSQLError($statement->errorInfo());
-        }*/
+        }
     }
 
     function updateTrail($trailID, $name, $description, $location, $distance, $difficulty, $loop, $bike, $activehours, $activeseason, $tempImageFilePath, $deleteImage) {
@@ -230,6 +224,7 @@
 
     function logSQLError($error) {
         $errorMessage = $error[2];
+        include '../view/errorPage.php';
     }
 
 ?>
