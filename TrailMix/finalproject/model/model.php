@@ -1,9 +1,9 @@
 <?php
 
     function getDBConnection() {
-        $dsn = 'mysql:host=localhost;dbname=s_cmhankey1';
-        $username = 's_cmhankey1';
-        $password = 's_cmhankey1';
+        $dsn = 'mysql:host=localhost;dbname=s_djhackenbe';
+        $username = 's_djhackenbe';
+        $password = 's_djhackenbe';
         try {
             $db = new PDO($dsn, $username, $password);
         } catch (PDOException $e) {

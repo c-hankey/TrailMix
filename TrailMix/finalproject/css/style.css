@@ -16,6 +16,11 @@ h1 {
     width: 25%;
 }
 
+.required{
+    color: red;
+    font-weight: bold;
+}
+
 #main, #about, #baker, #trails, #loop,
 #construction, #newsletter, #grading,
 #quote, #fileUpload, #newsletterUpload,

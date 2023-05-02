@@ -252,10 +252,15 @@
         if(!empty($difficulty) && !ctype_digit($difficulty) || $difficulty > 5){
             $php_errormsg .= "\\n* Difficulty must be a positive integer (whole number without decimals) and between 1 and 5. Enter 0 if unknown.";
         }
-        else if(!empty($distance) && !ctype_digit(($distance))){
+        if(empty($difficulty)){
+            $difficulty = 0;
+        }
+
+        if(!empty($distance) && !ctype_digit(($distance))){
             $php_errormsg .= "\\n* Distance must be a positive integer (whole number without decimals). Enter 0 if unknown.";
             $distance = 0;
         }
+
         if(empty($activehours) || strlen($activehours) > 30){
             $php_errormsg .= "\\n* Active trail hours are required and must be less than 30 characters long.";
         }
